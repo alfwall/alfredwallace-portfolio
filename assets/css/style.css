@@ -1,0 +1,106 @@
+:root {
+    --bg-upper-gradient: #90C6FF;
+    --bg-lower-gradient: #4759FF;
+    --bg-gradient-image: linear-gradient(var(--bg-upper-gradient), var(--bg-lower-gradient));
+    --bg-alt-gradient-image: linear-gradient(var(--bg-lower-gradient), var(--bg-upper-gradient));
+}
+
+header {
+    padding: 20px;
+    margin: 0px;
+}
+
+header h1 {
+    font-size: 69px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background-image: var(--bg-gradient-image);
+    /*background-image: url(../images/gradient.png) */
+}
+
+main {
+    padding: 50px;
+}
+
+section {
+    text-align: center;
+    background-image: var(--bg-alt-gradient-image);
+    padding: 10px;
+    margin: 10px;
+    border: 3px solid var(--bg-lower-gradient);
+    border-radius: 25px;
+}
+
+
+
+article.project {
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    margin: 10px;
+}
+
+article.project img {
+    width: 100%;
+    height: 100%;
+}
+
+h2 {
+    font-size: 42px;
+    margin: 10px;
+}
+
+footer {
+    color: black;
+    text-align: center;
+}
+
+footer h2 {
+    font-size: 16px;
+}
+
+ /* Extra small devices (phones, 600px and down) */
+ @media only screen and (max-width: 600px) {
+    
+ }
+
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ @media only screen and (min-width: 600px) {
+    
+ }
+ 
+ /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (min-width: 768px) {
+    
+ }
+ 
+ /* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (min-width: 992px) {
+    
+ }
+ 
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+ @media only screen and (min-width: 1200px) {
+    
+ } 
