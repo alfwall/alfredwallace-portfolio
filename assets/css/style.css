@@ -1,3 +1,4 @@
+/* I found a sneaky way to do color gradients! */
 :root {
     --bg-upper-gradient: #90C6FF;
     --bg-lower-gradient: #4759FF;
@@ -5,44 +6,51 @@
     --bg-alt-gradient-image: linear-gradient(var(--bg-lower-gradient), var(--bg-upper-gradient));
 }
 
+/* Header has my name as the title, and the nav bar. */
 header {
     padding: 20px;
     margin: 0px;
 }
 
+/* Biggest font on the whole page. */
 header h1 {
     font-size: 69px;
     font-family: sans-serif;
     text-align: center;
 }
 
-
+/* TODO: FLEX THIS */
 nav ul {
     list-style-type: none;
     text-align: center;
 }
 
+/* TODO: FLEX THIS */
 nav ul li {
     display: inline-block;
 }
 
+/* TODO: PRETTIER FONTS */
 nav ul li a {
     display: block;
     text-align: center;
     padding: 10px;
+    scroll-behavior: smooth;
 }
 
+/* The main bg is a gradient of blues. */
 body {
     min-height: 100vh;
     width: 100%;
     background-image: var(--bg-gradient-image);
-    /*background-image: url(../images/gradient.png) */
 }
 
+/* Some padding between header, main, and footer. */
 main {
-    padding: 50px;
+    padding: 25px;
 }
 
+/* The 3 main sections, About-Me, Work, and Contact-Info. Reversed background color gradient, rounded corners. */
 section {
     text-align: center;
     background-image: var(--bg-alt-gradient-image);
@@ -52,55 +60,102 @@ section {
     border-radius: 25px;
 }
 
-
-
-article.project {
-    border-style: solid;
-    border-color: black;
-    border-width: 2px;
-    margin: 10px;
-}
-
-article.project img {
-    width: 100%;
-    height: 100%;
-}
-
+/* Headers for the 3 main sections, "About Me", "Work", and "Contact" */
 h2 {
     font-size: 42px;
     margin: 10px;
 }
 
+/* On big screens, my photo and description ar */
+#about-me-flexbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* A photo of me! */
+section#about-me img {
+    display: inline-block;
+    width: 100%;
+    max-width: 200px;
+    margin: 25px;
+}
+
+/* The text in which I describe myself. */
+section#about-me p {
+    display: inline-block;
+    text-align: center;
+
+}
+
+
+
+
+
+
+
+/* Container for Work projects so that they flex properly. */
+#project-flexbox {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+/* All work project links have a slight border to them, and are inline. */
+#project-flexbox a {
+    display: inline-block;
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    margin: 5px;
+}
+
+/* The first work project must be bigger, and takes up the most space. */
+#project-flexbox a:first-child {
+    width: 100%;
+    flex: 0 0 95%;
+    border-color: red;
+}
+
+/* Everything after the first work project should take up 
+roughly 1/2 the width of the page.*/
+#project-flexbox a:not(:first-child) {
+    flex: 0 0 45%;
+    border-color: green;
+}
+/* The picture should fit in its link, ideally. */
+#project-flexbox a img {
+    width: 100%;
+}
+
+
+
+
+/* TODO: ??? */
 footer {
     color: black;
     text-align: center;
 }
-
+/* TODO: ???*/
 footer h2 {
     font-size: 16px;
 }
 
- /* Extra small devices (phones, 600px and down) */
- @media only screen and (max-width: 600px) {
-    
- }
 
- /* Small devices (portrait tablets and large phones, 600px and up) */
- @media only screen and (min-width: 600px) {
-    
- }
- 
- /* Medium devices (landscape tablets, 768px and up) */
- @media only screen and (min-width: 768px) {
-    
- }
- 
- /* Large devices (laptops/desktops, 992px and up) */
- @media only screen and (min-width: 992px) {
-    
- }
- 
- /* Extra large devices (large laptops and desktops, 1200px and up) */
- @media only screen and (min-width: 1200px) {
-    
- } 
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (max-width: 768px) {
+    /* Allow every work project to have max width when the screen is small. */
+    #project-flexbox a:not(:first-child) {
+        flex: 100%;
+        width: 100%;
+        border-color: purple;
+    }
+
+    /* Just to be completely sure, force flexbox to display as a column. */
+    #about-me-flexbox {
+        flex-direction: column;
+    }
+
+}
