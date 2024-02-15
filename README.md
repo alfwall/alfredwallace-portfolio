@@ -6,7 +6,7 @@ A portfolio web page with links to examples of my work.
 ## The Result
 [Click here!](https://alfwall.github.io/cbc-mod2c-portfolio/)
 
-![Screenshot of my portfolio page in all of its skeletal glory.](./)
+![Screenshot of my portfolio page in all of its skeletal glory.](./assets/images/deployed-portfolio-screenshot.png)
 
 ## Credits
 - [Eric Meyer's CSS reset](https://meyerweb.com/eric/tools/css/reset/)
