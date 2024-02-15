@@ -9,7 +9,6 @@
 /* Header has my name as the title, and the nav bar. */
 header {
     padding: 10px;
-    margin: 10px;
 }
 
 /* Biggest font on the whole page. */
@@ -64,7 +63,7 @@ body {
 
 /* Some padding between header, main, and footer. */
 main {
-    padding: 10px;
+    padding-bottom: 10px;
 }
 
 
@@ -147,18 +146,32 @@ section#about-me p {
     -webkit-transition: opacity .55s ease-in-out;
 }
 
+/* Floats over each work project image. Not aesthetically pleasing at the moment. */
+/* TODO: Make aesthetically pleasing. Rounded. Maybe some kinda fade? */
+span.project-title-text {
+    font-size: 36px;
+    font-family: sans-serif;
+    font-weight: 500;
+    color: var(--bg-lower-gradient);
+    background-color: var(--bg-upper-gradient);
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+    z-index: 1;
+    padding: 25px;
+    border-radius: 50%;
+}
+
 /* The first work project must be bigger, and takes up the most space. */
 #project-flexbox a:first-child {
     width: 100%;
     flex: 0 0 95%;
-    border-color: red;
 }
 
 /* Everything after the first work project should take up 
 roughly 1/2 the width of the page.*/
 #project-flexbox a:not(:first-child) {
     flex: 0 0 45%;
-    border-color: green;
 }
 
 /* The picture should fit in its link, ideally. */
@@ -167,20 +180,7 @@ roughly 1/2 the width of the page.*/
     object-fit: contain;
 }
 
-/* Floats over each work project image. Not aesthetically pleasing at the moment. */
-/* TODO: Make aesthetically pleasing. Rounded. Maybe a fade-in? */
-span.project-title-text {
-    font-size: 36px;
-    font-family: sans-serif;
-    font-weight: 500;
-    color: purple;
-    background-color: orange;
-    position: absolute;
-    bottom: 20%;
-    left: 0%;
-    z-index: 1;
-    padding: 5px;
-}
+
 
 
 /* Eh whatever just make it black font. */
