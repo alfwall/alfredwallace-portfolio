@@ -20,7 +20,7 @@ header h1 {
     text-align: center;
 }
 
-/* TODO: FLEX THIS */
+/* Nav bar is flexible, and horizontal on bigger screens. */
 nav ul {
     list-style-type: none;
     text-align: center;
@@ -30,7 +30,7 @@ nav ul {
     justify-content: center;
 }
 
-/* TODO: FLEX THIS */
+/* List items have a slight margin to them. */
 nav ul li {
     display: inline-block;
     margin: 5px;
@@ -55,9 +55,6 @@ nav ul li a {
 
 
 
-
-
-
 /* The main bg is a gradient of blues. */
 body {
     min-height: 100vh;
@@ -69,11 +66,6 @@ body {
 main {
     padding: 10px;
 }
-
-
-
-
-
 
 
 /* The 3 main sections, About-Me, Work, and Contact-Info. Reversed background color gradient, rounded corners. */
@@ -92,10 +84,6 @@ h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 10px;
 }
-
-
-
-
 
 
 /* My photo and description should change from horizontal to vertical when screen size varies. */
@@ -122,7 +110,6 @@ section#about-me p {
     font-size: 25px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 10px;
-
 }
 
 
@@ -160,7 +147,6 @@ section#about-me p {
     -webkit-transition: opacity .55s ease-in-out;
 }
 
-
 /* The first work project must be bigger, and takes up the most space. */
 #project-flexbox a:first-child {
     width: 100%;
@@ -197,31 +183,22 @@ span.project-title-text {
 }
 
 
-
-
-
-
-
-
-/* TODO: ??? */
-footer {
-    color: black;
-    text-align: center;
-}
-
-/* TODO: ???*/
+/* Eh whatever just make it black font. */
 footer h2 {
     font-size: 16px;
+    color: black;
+    text-align: center;
 }
 
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media screen and (max-width: 768px) {
-    /**/
+    /* Make the nav bar links vertical instead of horizontal. */
     nav ul {
         flex-direction: column;
     }
 
+    /* Also, bump up the font size. */
     nav ul li a {
         font-size: 50px;
     }
