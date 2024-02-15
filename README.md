@@ -14,14 +14,14 @@ A portfolio web page with links to examples of my work.
 ## TODO List
 - [x] Set up skeleton of page
 - [x] Name, Photo, Contact Info
-- [ ] Navigation smoothly scrolls down to individual sections
-    - [x] About Me section
-        - [x] Photo
-        - [x] Brief bio
-    - [x] Work examples section
-        - [x] All projects should have titled images of the apps
-        - [x] First project should be visibly larger than others
-        - [x] Project images should link to the deployed projects
+- [ ] Navigation smoothly scrolls down to individual sections (not required, but I should add javascript next)
+- [x] About Me section
+    - [x] Photo
+    - [x] Brief bio
+- [x] Work examples section
+    - [x] All projects should have titled images of the apps
+    - [x] First project should be visibly larger than others
+    - [x] Project images should link to the deployed projects
 - [x] Resizing the page should reveal responsive layout
 
 ## User Story
