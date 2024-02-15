@@ -1,7 +1,7 @@
 # My Portfolio Home Page
 
 ## Description
-A portfolio web app displaying examples of my work.
+A portfolio web page with links to examples of my work.
 
 ## Credits
 - [Eric Meyer's CSS reset](https://meyerweb.com/eric/tools/css/reset/)
