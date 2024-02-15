@@ -8,13 +8,14 @@
 
 /* Header has my name as the title, and the nav bar. */
 header {
-    padding: 20px;
-    margin: 0px;
+    padding: 10px;
+    margin: 10px;
 }
 
 /* Biggest font on the whole page. */
 header h1 {
-    font-size: 69px;
+    font-size: 72px;
+    font-weight: bolder;
     font-family: sans-serif;
     text-align: center;
 }
@@ -23,20 +24,39 @@ header h1 {
 nav ul {
     list-style-type: none;
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
 /* TODO: FLEX THIS */
 nav ul li {
     display: inline-block;
+    margin: 5px;
 }
 
-/* TODO: PRETTIER FONTS */
+/* The nav bar links are circled and colored in. They're not my best work. */
 nav ul li a {
     display: block;
     text-align: center;
     padding: 10px;
     scroll-behavior: smooth;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 50%;
+    background-color:#4759FF;
+    color: black;
+    padding: 20px;
 }
+
+
+
+
+
 
 /* The main bg is a gradient of blues. */
 body {
@@ -47,8 +67,14 @@ body {
 
 /* Some padding between header, main, and footer. */
 main {
-    padding: 25px;
+    padding: 10px;
 }
+
+
+
+
+
+
 
 /* The 3 main sections, About-Me, Work, and Contact-Info. Reversed background color gradient, rounded corners. */
 section {
@@ -62,11 +88,17 @@ section {
 
 /* Headers for the 3 main sections, "About Me", "Work", and "Contact" */
 h2 {
-    font-size: 42px;
+    font-size: 56px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 10px;
 }
 
-/* On big screens, my photo and description ar */
+
+
+
+
+
+/* My photo and description should change from horizontal to vertical when screen size varies. */
 #about-me-flexbox {
     display: flex;
     flex-direction: row;
@@ -74,23 +106,24 @@ h2 {
     align-items: center;
 }
 
-/* A photo of me! */
+/* A photo of me! Rounded. Smoothed. Like my head. */
 section#about-me img {
     display: inline-block;
     width: 100%;
     max-width: 200px;
     margin: 25px;
+    border-radius: 25%;
 }
 
 /* The text in which I describe myself. */
 section#about-me p {
     display: inline-block;
     text-align: center;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px;
 
 }
-
-
-
 
 
 
@@ -104,13 +137,29 @@ section#about-me p {
 }
 
 /* All work project links have a slight border to them, and are inline. */
+/* Also does a nice fade-in when not hovered over. */
 #project-flexbox a {
-    display: inline-block;
     border-style: solid;
     border-color: black;
     border-width: 5px;
     margin: 5px;
+
+    position: relative;
+
+    opacity: 1.0;
+    transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
 }
+
+/* Do a neat lil fade when moused over.*/
+#project-flexbox a:hover {
+    opacity: 0.6;
+    transition: opacity .55s ease-in-out;
+    -moz-transition: opacity .55s ease-in-out;
+    -webkit-transition: opacity .55s ease-in-out;
+}
+
 
 /* The first work project must be bigger, and takes up the most space. */
 #project-flexbox a:first-child {
@@ -125,10 +174,31 @@ roughly 1/2 the width of the page.*/
     flex: 0 0 45%;
     border-color: green;
 }
+
 /* The picture should fit in its link, ideally. */
 #project-flexbox a img {
     width: 100%;
+    object-fit: contain;
 }
+
+/* Floats over each work project image. Not aesthetically pleasing at the moment. */
+/* TODO: Make aesthetically pleasing. Rounded. Maybe a fade-in? */
+span.project-title-text {
+    font-size: 36px;
+    font-family: sans-serif;
+    font-weight: 500;
+    color: purple;
+    background-color: orange;
+    position: absolute;
+    bottom: 20%;
+    left: 0%;
+    z-index: 1;
+    padding: 5px;
+}
+
+
+
+
 
 
 
@@ -138,6 +208,7 @@ footer {
     color: black;
     text-align: center;
 }
+
 /* TODO: ???*/
 footer h2 {
     font-size: 16px;
@@ -146,6 +217,15 @@ footer h2 {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media screen and (max-width: 768px) {
+    /**/
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li a {
+        font-size: 50px;
+    }
+
     /* Allow every work project to have max width when the screen is small. */
     #project-flexbox a:not(:first-child) {
         flex: 100%;

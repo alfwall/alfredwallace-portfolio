@@ -8,16 +8,16 @@ A portfolio web app displaying examples of my work.
 
 ## TODO List
 - [x] Set up skeleton of page
-- [ ] Name, Photo, Contact Info
+- [x] Name, Photo, Contact Info
 - [ ] Navigation smoothly scrolls down to individual sections
     - [ ] About Me section
         - [ ] Photo
         - [ ] Brief bio
     - [ ] Work examples section
         - [ ] All projects should have titled images of the apps
-        - [ ] First project should be visibly larger than others
-        - [ ] Project images should link to the deployed projects
-- [ ] Resizing the page should reveal responsive layout
+        - [x] First project should be visibly larger than others
+        - [x] Project images should link to the deployed projects
+- [x] Resizing the page should reveal responsive layout
 
 ## User Story
 AS AN employer
