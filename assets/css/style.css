@@ -155,7 +155,7 @@ span.project-title-text {
     color: var(--bg-lower-gradient);
     background-color: var(--bg-upper-gradient);
     position: absolute;
-    bottom: 5%;
+    bottom: 12%;
     left: 10%;
     z-index: 1;
     padding: 25px;
